@@ -1,6 +1,10 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
+  h1 Error
+  h2 Something went wrong
+  p If you're seeing this page, We maaaay have done something wrong.
+  p If you're looking for a page that should exist as instructed by your professor, it may have been missing.
+  p Please copy the error stack below, and send it to our Issue Tracker at Github. Thanks!
+  p ...how many wolf Librarians does it take to organize a bookshelf...
   pre #{error.stack}
