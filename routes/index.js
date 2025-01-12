@@ -10,6 +10,10 @@ router.get('/about', function(req, res, next){
   res.render('about');
 });
 
+router.get('/disciplines', function(req, res, next){
+  res.render('lab');
+});
+
 router.get('/disciplines/cs-cpe', function(req, res, next){
   res.render('Disciplines/coengg')
 })
