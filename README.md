@@ -24,6 +24,7 @@ npm i pug
 npm start
 ```
 
-### LICENSES
+### Licenses And Atrribution
 - This Website is Licensed with the APGL 3.0 License, and its contents are under CC-BY-NC-SA 4.0.
 - Content is by the Ministry of Education (India) at [Virtual Lab (VLab)](https://www.vlab.co.in/).
+- I am not affiliated, in any way, by the aforementioned government nor the Virtual Labs Team, the owners of the site.
