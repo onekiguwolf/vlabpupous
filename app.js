@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var csRouter = require('./routes/cscpe-handler');
+var cs01 = require('./routes/CSCPE');
+var cs01lab01 = require('./routes/CSCPE/01')
 
 var app = express();
 
@@ -20,7 +21,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/cscpe', csRouter);
+app.use('/cscpe/01', cs01);
+app.use('/cscpe/01/lab01', cs01lab01)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
