@@ -5,8 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var cs01 = require('./routes/CSCPE');
-var cs01lab01 = require('./routes/CSCPE/01')
+var cs01 = require('./routes/CSCPE/01/annetworks');
+var cs01lab01 = require('./routes/CSCPE/01/lab01/cscpe-01-01')
 
 var app = express();
 
