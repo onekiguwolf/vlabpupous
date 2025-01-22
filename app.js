@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var cs01 = require('./routes/CSCPE/01/annetworks');
 var cs01lab01 = require('./routes/CSCPE/01/lab01/cscpe-01-01')
+var cs01lab02 = require('./routes/CSCPE/01/lab02/cscpe-01-02')
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/cscpe/01', cs01);
 app.use('/cscpe/01/lab01', cs01lab01)
+app.use('/cscpe/01/lab02', cs01lab02)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

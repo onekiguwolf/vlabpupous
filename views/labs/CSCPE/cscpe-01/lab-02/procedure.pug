@@ -1,0 +1,51 @@
+extends lab-layout 
+
+block content
+    h2 Lab 01:
+    h1 Parallel and distributed processing - I: Interactive activation and competition models
+    h2 Procedures:
+    form(action='/cscpe/01/lab01/theory')
+        button(type='submit') Previous Article: Theory
+    br
+    ol 
+        li
+            p Check the initial state of the model by moving the mouse over various units in different pools.
+        li 
+            p Check the value for every unit and the inhibitory and excitatory connections it exhibits with units in same and different pools.
+        li 
+            p Click on any unit in the 'Name' pool and let the model settle down (in a couple of seconds). The settling down can be observed through the global change scale in the bottom margin.
+        li 
+            p Observe the connections between various units and pools (both green and red), popping up after the external input is provided.
+        li 
+            p Check with all the pools, the units with highest values within them, and match with the table provided in the tutorial section whether it belongs to same unit.
+        ol 
+            li 
+                p Observe the bottom of the simulator to know which cycle number is going on and to see the g-delta plot and global change value.
+            li
+                p Hover your mouse over any component to highlight the component and see it's excitatory and inhibitory connections with other units. The activation and net input of that unit is displayed on top left.
+            li 
+                p Click on any unit (except in the instance pool) to give external input to that unit and activate it.
+            li 
+                p Observe how activation of that unit affects the other units activation and net inputs.
+            li 
+                p Also observe how the global change spikes in the few cycles after giving external input to a unit.
+            li 
+                p Click on same unit to take away the external input given to that unit.
+            li 
+                p Observe how the residual net input remains even after removing external input.
+            li 
+                p Press spacebar to pause the simulator in current cycle. Press spacebar again to resume cycles.
+            li 
+                p In paused position, hover over units whose activation data you want. In paused position, cycle will be stopped and giving external input will be disallowed.
+            li 
+                p Press r to reset the simulator with the same values just used in the simulator.
+            li 
+                p Press s to activate slow motion mode which performs cycles slower than actual speed to get a closer look at how the values of the units change. Press s again to resume real speed cycle change.
+            li 
+                p Change the values of the variables in the table ( in range of (original value - 0.5) to (original value + 0.5) ) and click on set values and restart to start new set of cycles with changed values of variables.
+            li 
+                p Click on Reset original values and restart to start new set of cycles with original values of variables.
+    form(action='https://cse22-iiith.vlabs.ac.in/exp/parallel-distributed-processing-i/simulation.html')
+        button(type='submit') PROCEED TO SIMULATION
+    form(action='/cscpe/01/lab01/observations')
+        button(type='submit') Next Article: Observations
