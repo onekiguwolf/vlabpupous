@@ -1,20 +1,17 @@
 extends lab-layout
 
 block content 
-    h2 Lab 01:
-    h1 Parallel and distributed processing - I: Interactive activation and competition models
+    h2 Lab 02:
+    h1 Parallel and distributed processing - II: Constraint satisfaction neural network models
     h2 Assignment:
-    form(action='/cscpe/01/lab01/observations')
+    form(action='/cscpe/01/lab02/observations')
         button(type='submit') Previous Article: Observations
     br
-    p Using the experiment identify the following properties of human memory to store and retrieve knowledge:
     ol 
         li
-            p External activation to one unit in the name pool results in a positive change in activation of units in other pools as well as the instance pool.
+            p Try to observe how the number of clamped units affect the equilibrium state of the model.
         li 
-            p External activation to a unit in the name pool leads towards positive activation of other names in the instance pool.
-        li 
-            p How the activation values changes when two or more names are chosen in the name pool.
+            p Try to relate the final equilibrium state of the model descriptors with a particular room type using Hinton diagram while clamping different set of descriptors.
         
-    form(action='/cscpe/01/lab01/references')
+    form(action='/cscpe/01/lab02/references')
         button(type='submit') Next Article: References

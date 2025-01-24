@@ -11,6 +11,8 @@ router.get('/lab01', function(req, res, next) {
 router.get('/lab02', function(req, res, next) {
   res.render('labs/CSCPE/cscpe-01/lab-02/aim');
 });
-
+router.get('/lab03', function(req, res, next) {
+  res.render('labs/CSCPE/cscpe-01/lab-03/aim');
+});
 
 module.exports = router;

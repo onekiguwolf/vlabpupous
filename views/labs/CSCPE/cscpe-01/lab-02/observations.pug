@@ -1,24 +1,20 @@
 extends lab-layout 
 
 block content 
-    h2 Lab 01:
-    h1 Parallel and distributed processing - I: Interactive activation and competition models
+    h2 Lab 02:
+    h1 Parallel and distributed processing - II: Constraint satisfaction neural network models
     h2 Observations:
-    form(action='/cscpe/01/lab01/procedure')
+    form(action='/cscpe/01/lab02/procedure')
         button(type='submit') Previous Article: Procedures and Lab Simulation
     br
     ol 
         li
-            p Observe the initial state of the model has inhibitory (red) connections with rest of the members in the same pool.
+            p The constraint satisfaction model has a set of weak constraints defined between a given number of descriptos which is utilized to build conclusions.
         li 
-            p Note that the instance pool units have excitatory connections with all related data in every pool with that particular unit.
+            p The Hinton diagram presents a pictorial view of the constraints present in the model. The relation between the descriptors trained for different room types is developed using (w_{ij}) given in the tutorial.
         li 
-            p Note that initially all units in all the pools have negative activation value set at '-1.000' .
+            p While testing the model when some units are clamped, rest of the units experience a change in their states according the constraints between them and the clamped states. This can be verified from the Hinton diagram.
         li 
-            p After clicking on any node in the 'Name' pool, we see that as the model settles down after calculation of weighted inputs and outputs for respective units, all units have different values of output.
-        li 
-            p Observe the values for units in every pool and find out which unit has the highest value.
-        li
-            p Click on units in other pools apart from 'Names' and observe how activating multiple units leads to increased activation to units in the name pool.
-    form(action='/cscpe/01/lab01/assignment')
+            p Clamping different units while testing the model results in settling of the model in different equilibrium states. These equilibrium states may correspond to either the same or different room type.
+    form(action='/cscpe/01/lab02/assignment')
         button(type='submit') Next Article: Assignment
