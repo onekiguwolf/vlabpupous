@@ -4,19 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const serverless = require('serverless-http')
-
-var indexRouter = require('./routes/index');
-var cs01 = require('./routes/CSCPE/01/annetworks');
-var cs01lab01 = require('./routes/CSCPE/01/lab01/cscpe-01-01')
-var cs01lab02 = require('./routes/CSCPE/01/lab02/cscpe-01-02')
-var cs01lab03 = require('./routes/CSCPE/01/lab03/cscpe-01-03')
-var cs01lab04 = require('./routes/CSCPE/01/lab04/cscpe-01-04')
+const router = express.Router()
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+let views = path.join(__dirname, './views')
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -24,13 +16,28 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/cscpe/01', cs01);
-app.use('/cscpe/01/lab01', cs01lab01)
-app.use('/cscpe/01/lab02', cs01lab02)
-app.use('/cscpe/01/lab03', cs01lab03)
-app.use('/cscpe/01/lab04', cs01lab04)
 
+// pls work
+router.get('/', (req, res) => {
+  res.sendFile('index.html', { root: views })
+})
+
+//other routers qwp
+router.get('/cscpe/01', (req, res) => {
+  res.sendFile('./labs/CSCPE/cscpe-01/home.html', { root: views })
+})
+router.get('/cscpe/01/lab01/aim', (req, res) => {
+  res.sendFile('./labs/CSCPE/cscpe-01/lab-01/aim.html', { root: views })
+})
+router.get('/cscpe/01/lab02/aim', (req, res) => {
+  res.sendFile('./labs/CSCPE/cscpe-01/lab-02/aim.html', { root: views })
+})
+router.get('/cscpe/01/lab03/aim', (req, res) => {
+  res.sendFile('./labs/CSCPE/cscpe-01/lab-03/aim.html', { root: views })
+})
+router.get('/cscpe/01/lab04/aim', (req, res) => {
+  res.sendFile('./labs/CSCPE/cscpe-01/lab-04/aim.html', { root: views })
+})
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -46,6 +53,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-const router = express.Router()
-app.use('/.netlify/functions/api', router);
+module.exports = app;
 module.exports.handler = serverless(app)

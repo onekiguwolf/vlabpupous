@@ -12,7 +12,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort('3000');
 app.set('port', port);
 
 /**
@@ -25,6 +25,24 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+// route files. Let's see if this works
+var indexRouter = require('./routes/index');
+var cs01 = require('./routes/CSCPE/01/annetworks');
+var cs01lab01 = require('./routes/CSCPE/01/lab01/cscpe-01-01')
+var cs01lab02 = require('./routes/CSCPE/01/lab02/cscpe-01-02')
+var cs01lab03 = require('./routes/CSCPE/01/lab03/cscpe-01-03')
+var cs01lab04 = require('./routes/CSCPE/01/lab04/cscpe-01-04')
+app.use('/', indexRouter);
+app.use('/cscpe/01', cs01);
+app.use('/cscpe/01/lab01', cs01lab01)
+app.use('/cscpe/01/lab02', cs01lab02)
+app.use('/cscpe/01/lab03', cs01lab03)
+app.use('/cscpe/01/lab04', cs01lab04)
+
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
@@ -33,7 +51,7 @@ server.on('listening', onListening);
  * Normalize a port into a number, string, or false.
  */
 
-function normalizePort(val) {
+/*function normalizePort(val) {
   var port = parseInt(val, 10);
 
   if (isNaN(port)) {
@@ -47,11 +65,13 @@ function normalizePort(val) {
   }
 
   return false;
-}
+}*/
 
 /**
  * Event listener for HTTP server "error" event.
  */
+
+
 
 function onError(error) {
   if (error.syscall !== 'listen') {
@@ -86,5 +106,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  console.log('Listening on ' + bind);
 }
