@@ -1,5 +1,18 @@
 doctype html
 html
+  .timebar
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script.
+      $(document).ready(function() {
+        function updateTime() {
+          var now = new Date();
+          var formattedTime = now.toLocaleString();
+          $('#datetime').text(formattedTime);
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+      });
+    p#datetime
   nav 
     .container
       .navbar-brand

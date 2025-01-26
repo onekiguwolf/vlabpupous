@@ -1,5 +1,21 @@
+.timebar {
+  background-color: #641010;
+  overflow: hidden;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5%;
+}
+.timebar p {
+  color: white;
+  margin: auto;
+  padding: 10px
+}
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 a {
@@ -19,7 +35,7 @@ img {
 }
 
 .footbar {
-  background-color: #333;
+  background-color: #641010;
   overflow: hidden;
   position: fixed;
   bottom: 0;
