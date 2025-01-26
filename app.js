@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+import serverless from "serverless-http"
 
 var indexRouter = require('./routes/index');
 var cs01 = require('./routes/CSCPE/01/annetworks');
@@ -46,4 +47,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+export const handler = serverless(app)
