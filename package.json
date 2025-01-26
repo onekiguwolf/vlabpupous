@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "netlify-lambda build app",
+    "build": "netlify-lambda build app.js",
     "start": "node ./bin/www",
     "pug": "node node_modules/pug-cli/index.js views/ --out ../"
   },
