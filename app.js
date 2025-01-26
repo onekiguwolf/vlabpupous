@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-import serverless from "serverless-http"
+const serverless = require('serverless-http')
 
 var indexRouter = require('./routes/index');
 var cs01 = require('./routes/CSCPE/01/annetworks');
