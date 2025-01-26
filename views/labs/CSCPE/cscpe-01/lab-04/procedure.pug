@@ -1,0 +1,25 @@
+extends lab-layout 
+
+block content
+    h2 Lab 03:
+    h1 Perceptron Learning
+    h2 Procedures:
+    form(action='/cscpe/01/lab03/theory')
+        button(type='submit') Previous Article: Theory
+    br
+    ol 
+        li
+            p Select a problem type for generating two classes as 'Linearly separable' or 'Linearly inseparable'.
+        li 
+            p Choose for a number of samples per class and number of iterations the perceptron network must go through.
+        li 
+            p Choose a step size to move over the number of iterations for display of results for the perceptron network.
+        li 
+            p Intialize the perceptron network by clicking on the 'Init perceptron' button.
+        li 
+            p Click on button for display of results according to the given step size.
+        
+    form(action='https://cse22-iiith.vlabs.ac.in/exp/perceptron-learning/simulation.html')
+        button(type='submit') PROCEED TO SIMULATION
+    form(action='/cscpe/01/lab03/observations')
+        button(type='submit') Next Article: Observations
