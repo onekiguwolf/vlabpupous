@@ -6,6 +6,7 @@
   from = "/api/*"
   status = 200
   to = "/.netlify/functions/api/:splat"
-[builds]
-    npm i
-    node ./bin/www
+[build]
+    functions = "functions"
+[dev]
+    publish = ".bin"
