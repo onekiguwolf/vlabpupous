@@ -1,35 +1,48 @@
 doctype html
 html
-  .timebar
-      script(src="https://code.jquery.com/jquery-3.6.0.min.js")
-      script.
-        $(document).ready(function() {
-          function updateTime() {
-            var now = new Date();
-            var formattedTime = now.toLocaleString();
-            $('#datetime').text(formattedTime);
-          }
-          setInterval(updateTime, 1000);
-          updateTime();
-        });
-      p#datetime
   nav 
-    .container
-      .navbar-brand
-        p Polytechnic University of the Philippines 
-        p Open University System 
-        p Virtual Laboratory "VLab"
+    .titlebar
       ul 
         li
-          a(href="/") Home
-        li
-          a(href="/disciplines/cs-cpe") CS-CPE 
-        li
-          a(href="/labs/CSCPE/cscpe-01/home") Subject
+          a(href='/') Home 
+        li 
+          a(href='about') About the Dev 
+        li 
+          a(href='https://github.com/onekiguwolf/vlabpupous') Source Code 
+        li 
+          a(href='https://github.com/onekiguwolf/vlabpupous/issues') Issue Tracker
+    .sitename 
+      p Polytechnic University of the Philippines 
+      p Open University System
+      h3 Virtual Laboratory (VLab)
+      img(href='../public/images/PUPOUSLogo.png')
+  .timebar
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script.
+      $(document).ready(function() {
+        function updateTime() {
+          var now = new Date();
+          var formattedTime = now.toLocaleString();
+          $('#datetime').text(formattedTime);
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+      });
+    p#datetime
   head
     title PUP OUS VLab
     link(rel='stylesheet',href='/public/stylesheets/style.css')
     link(rel="icon", type="image/x-icon", href="/public/images/PUP%20Logo.png")
+  br
+  .sidenav
+    h3 Categories
+    ul 
+      li 
+        a(href= "/disciplines/elec-comm") Electronics and Communications
+      li 
+        a(href="/disciplines/cs-cpe") Computer Science and Engineering
+      li
+        a(href="/disciplines/eengg") Electrical Engineering
   body
     block content
   br
