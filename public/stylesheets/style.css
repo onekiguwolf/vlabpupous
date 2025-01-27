@@ -51,14 +51,21 @@ body {
 .sitename {
   overflow: hidden;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 7%;
+  left: 6%;
   width: 100%;
-  height: 15%
+  height: 15%;
 }
 .sitename p {
   color: white;
-  margin:0%;
+  margin: 0% !important
+}
+.sitename h3 {
+  color: white;
+  margin: 0% !important
+}
+.sitename img {
+  display: block;
 }
 a {
   color: #00B7FF;
