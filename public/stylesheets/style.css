@@ -29,7 +29,7 @@ body {
 .titlebar ul {
   list-style-type: none;
   margin-left:70%;
-  margin-top: 5%;
+  margin-top: 1%;
   padding: 0;
   overflow: hidden;
 }
@@ -48,12 +48,17 @@ body {
   background-color: white;
   color:black;
 }
-.titlebar p {
+.sitename {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 15%
+}
+.sitename p {
   color: white;
-  margin: auto;
-  padding: 10px;
-  left: 0;
-  top: 10;
+  margin:0%;
 }
 a {
   color: #00B7FF;
