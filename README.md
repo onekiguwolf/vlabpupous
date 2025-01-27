@@ -19,7 +19,12 @@ npm i http-errors
 npm i morgan
 npm i pug
 ```
-- Nodemon is optional for testing.
+- (Optional) Should you be hosting this not yourself and on Netlify like I did, pug *will* not work. Consider adding these too:
+```shell
+npm i netlify-lambda
+npm i pug-cli
+```
+- **NOTE:** This *will* actually fumble a little with your routing. Make sure to check in on that after deployment (Netlify sees your routes differently).
 
 ### Running the Code:
 ```shell
@@ -29,4 +34,4 @@ npm start
 ### Licenses And Atrribution
 - This Website is Licensed with the APGL 3.0 License, and its contents are under CC-BY-NC-SA 4.0.
 - Content is by the Ministry of Education (India) at [Virtual Lab (VLab)](https://www.vlab.co.in/).
-- I am not affiliated, in any way, by the aforementioned government nor the Virtual Labs Team, the owners of the site.
+- I am not affiliated, in any way, with the aforementioned government nor with the Virtual Labs Team, the owners of the site.
