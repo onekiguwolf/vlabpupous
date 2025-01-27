@@ -18,6 +18,9 @@ body {
   margin-top: 10%;
   width: 50%;
   margin-left:30%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-bottom:10%;
 }
 .titlebar {
   background-color: #a27070;
@@ -131,7 +134,7 @@ img {
   text-decoration: none;
 }
 
-li a:hover {
+.sidenav li a:hover {
   background-color: #641010;
   color: white;
 }

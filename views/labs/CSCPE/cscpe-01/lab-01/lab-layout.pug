@@ -1,5 +1,21 @@
 doctype html
 html
+  nav 
+    .titlebar
+      ul 
+        li
+          a(href='/') Home 
+        li 
+          a(href='about') About the Dev 
+        li 
+          a(href='https://github.com/onekiguwolf/vlabpupous') Source Code 
+        li 
+          a(href='https://github.com/onekiguwolf/vlabpupous/issues') Issue Tracker
+    .sitename 
+      p Polytechnic University of the Philippines 
+      p Open University System
+      h3 Virtual Laboratory (VLab)
+      img(href='../public/images/PUPOUSLogo.png')
   .timebar
     script(src="https://code.jquery.com/jquery-3.6.0.min.js")
     script.
@@ -13,28 +29,14 @@ html
         updateTime();
       });
     p#datetime
-  nav 
-    .container
-      .navbar-brand
-        p Polytechnic University of the Philippines 
-        p Open University System 
-        p Virtual Laboratory "VLab"
-      ul 
-        li
-          a(href="/") Home
-        li
-          a(href="/disciplines/cs-cpe") CS-CPE 
-        li
-          a(href="/cscpe/01") Subject
   head
     title PUP OUS VLab
-    link(rel='stylesheet', href='/public/stylesheets/style.css')
+    link(rel='stylesheet', href='../../../stylesheets/style.css')
     link(rel="icon", type="image/x-icon", href="/public/images/PUP%20Logo.png")
-  body
-    block content
-    br
-    h3 Coverage: 
-    ul
+  br
+  .sidenav
+    h3 Categories
+    ul 
       li
         a(href='aim') Aim 
       li 
@@ -49,6 +51,8 @@ html
         a(href='assignment') Assignment 
       li 
         a(href='references') References
+  body
+    block content
   .footbar
     footer 
     p Copyright 2025 © PUP Open University System. This website is for Educational Purposes ONLY. Licensed by 
@@ -56,5 +60,5 @@ html
      |  and 
      a(href="https://creativecommons.org/licenses/by-nc-sa/4.0/") CC-BY-NC-SA 4.0
     p Proudly hosted in, as you guessed, 
-      a(href="https://www.netlify.com/") Netlify 
-      | on a Free tier (pls do not smite me.)
+      a(href="https://www.netlify.com/") Netlify
+      |  on a Free tier (pls do not smite me.)
