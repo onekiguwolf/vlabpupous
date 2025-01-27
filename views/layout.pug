@@ -1,5 +1,18 @@
 doctype html
 html
+  nav 
+    .titlebar
+      p Polytechnic University of the Philippines 
+      p Open University System
+      ul 
+        li
+          a(href='/') Home 
+        li 
+          a(href='about') About the Dev 
+        li 
+          a(href='https://github.com/onekiguwolf/vlabpupous') Source Code 
+        li 
+          a(href='https://github.com/onekiguwolf/vlabpupous/issues') Issue Tracker
   .timebar
     script(src="https://code.jquery.com/jquery-3.6.0.min.js")
     script.
@@ -13,17 +26,6 @@ html
         updateTime();
       });
     p#datetime
-  nav 
-    .titlebar 
-      ul 
-        li
-          a(href='/') Home 
-        li 
-          a(href='about') About the Dev 
-        li 
-          a(href='https://github.com/onekiguwolf/vlabpupous') Source Code 
-        li 
-          a(href='https://github.com/onekiguwolf/vlabpupous/issues') Issue Tracker
   head
     title PUP OUS VLab
     link(rel='stylesheet', href='../public/stylesheets/style.css')
