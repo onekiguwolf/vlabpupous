@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/087beca0-a3e6-4bab-8da5-4464f88455bb/deploy-status)](https://app.netlify.com/sites/vlabs-pupous/deploys)
+
 # Virtual Lab (VLab) Website
 ## For PUP Open University System
 
