@@ -16,7 +16,8 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin-top: 10%;
-  width: 100%
+  width: 50%;
+  margin-left:30%;
 }
 .titlebar {
   background-color: #a27070;
