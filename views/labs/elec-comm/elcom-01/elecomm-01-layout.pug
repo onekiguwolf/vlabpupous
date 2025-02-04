@@ -1,0 +1,57 @@
+doctype html
+html
+  nav 
+    .titlebar
+      ul 
+        li
+          a(href='/') Home 
+        li 
+          a(href='/about') About the Dev 
+        li 
+          a(href='https://github.com/onekiguwolf/vlabpupous') Source Code 
+        li 
+          a(href='https://github.com/onekiguwolf/vlabpupous/issues') Issue Tracker
+    .sitename 
+      p Polytechnic University of the Philippines 
+      p Open University System
+      h3 Virtual Laboratory (VLab)
+      img(href='../public/images/PUPOUSLogo.png')
+  .timebar
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script.
+      $(document).ready(function() {
+        function updateTime() {
+          var now = new Date();
+          var formattedTime = now.toLocaleString();
+          $('#datetime').text(formattedTime);
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+      });
+    p#datetime
+  head
+    title PUP OUS VLab
+    link(rel='stylesheet',href='/public/stylesheets/style.css')
+    link(rel="icon", href="/public/images/puplogo.png", type="image/x-icon")
+  br
+  .sidenav
+    h3 Categories
+    ul 
+      li 
+        a(href= "/disciplines/elec-comm") Electronics and Communications
+      li 
+        a(href="/disciplines/cs-cpe") Computer Science and Engineering
+      li
+        a(href="/disciplines/eengg") Electrical Engineering
+  body
+    block content
+  br
+  .footbar
+    footer 
+    p Copyright 2025 © PUP Open University System. This website is for Educational Purposes ONLY. Licensed by 
+     a(href="https://www.gnu.org/licenses/agpl-3.0.en.html") AGPL 3.0
+     |  and 
+     a(href="https://creativecommons.org/licenses/by-nc-sa/4.0/") CC-BY-NC-SA 4.0
+    p Proudly hosted in, as you guessed, 
+      a(href="https://www.netlify.com/") Netlify
+      |  on a Free tier (pls do not smite me.)
