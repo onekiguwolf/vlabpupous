@@ -1,0 +1,36 @@
+extends lab-layout 
+
+block content
+    h2 Lab 01:
+    h1 Familiarization with the Breadboard
+    h2 Procedures:
+    form(action='theory')
+        button(type='submit') Previous Article: Theory
+    br
+    ol 
+        li 
+            p Click on "Click Here" in Simulation tab.
+        li 
+            p Read every slide carefully to know about Breadboard Connections.
+        li 
+            p For the next slide, click on ">" Button and for previous slide, click on "<" button 
+    h3 Power Supply Connections 
+    ol 
+        li 
+            p Connect +5 V and ground terminals of the power supply to different power rails of one side of breadboard.
+        li 
+            p Connect the power rails on both sides by using jumper wires.
+        li 
+            p Connect horizontal rows by using jumper wires.
+        img(src='/public/images/elec-comm/01/lab01/procedures/1.jpg')
+        p.center Figure 01: A breadboard with power rail connections.
+        li 
+            p Thus, top and bottom rail sets of power rails become active which is shown by blue colour. Now, all holes of two sets of power rails are ready to use.
+        li 
+            p As different components are placed over breadboard, all the holes which are internally connected become active and are shown in red colour.
+    h3 Familiarize with the Components
+
+    form(action='https://ade-iitr.vlabs.ac.in/exp/general-bread-board/simulation.html')
+        button(type='submit') PROCEED TO SIMULATION
+    form(action='references')
+        button(type='submit') Next Article: References
