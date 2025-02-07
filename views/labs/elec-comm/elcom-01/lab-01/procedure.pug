@@ -29,8 +29,77 @@ block content
         li 
             p As different components are placed over breadboard, all the holes which are internally connected become active and are shown in red colour.
     h3 Familiarize with the Components
-
-    form(action='https://ade-iitr.vlabs.ac.in/exp/general-bread-board/simulation.html')
-        button(type='submit') PROCEED TO SIMULATION
+    img(src='/public/images/elec-comm/01/lab01/procedures/components.png')
+    p.center All components, from left to right: Breadboard, 5v DC Supply, 220 ohm Resistor x3, Light Emitting Diodes (LEDs) x3.
+    h3 Series connections on Breadboard 
+    ol 
+        li 
+            p Click on the Component button to place components on the table.
+        li 
+            p Make connections as per the circuit diagram or connection table.
+        li 
+            p All five holes in a vertical column are electrically connected; hence two legs of LED and resistance should be in different vertical columns.
+        img(src='/public/images/elec-comm/01/lab01/procedures/2.jpg')
+        p.center Figure 02: Circuit diagram for series connections of LEDs.
+        img(src='/public/images/elec-comm/01/lab01/procedures/table1.png')
+        p.center Table 1: Connection table for series connection
+        li
+            p Click on Check Connections button. If connections are right, click on ‘OK’, then Simulation will become active.
+        li 
+            p Observe output i.e. all LEDs will be ON.
+        li 
+            p Now select Parallel connection.
+    h3 Parallel Connections on Breadbard 
+    ol 
+        li 
+            p Click on the Component button to place components on the table.
+        li 
+            p Make connections as per the circuit diagram or connection table.
+        img(src='/public/images/elec-comm/01/lab01/procedures/3.jpg')
+        p.center Figure 03: Circuit diagram for parallel connections of LEDs.
+        img(src='/public/images/elec-comm/01/lab01/procedures/table2.png')
+        p.center Table 2: Connection table for Parallel connection
+        li 
+            p Click on Check Connections button. If connections are right, click on ‘OK’, then Simulation will become active.
+        li 
+            p Observe output i.e. all LEDs will be ON.
+        li 
+            p Click on > button for next slide.
+    h3 Familiarisation with Logic Gate connections of an IC 7432 (74LS32)
+    ol 
+        li
+            p Click on the Component button to place components on the table.
+        img(src='/public/images/elec-comm/01/lab01/procedures/components-2.png')
+        p.center From left to right: Breadboard, 5v DC Supply, IC 74LS32 x1, 220 ohm resistor x1, LED x1, switches x2 
+        li 
+            p Note that IC’s half circle is on the left side on the breadboard.
+        li 
+            p Connect pin 14 to the power supply (+5 V) and pin 7 to ground (0 V). (Refer pin diagram of IC 7432).
+        img(src='/public/images/elec-comm/01/lab01/procedures/procedure4-1.jpg')
+        p.center Pin Diagram of a 74LS32 IC, known as the QUAD OR Gate.
+        img(src='/public/images/elec-comm/01/lab01/procedures/table3.png')
+        p.center Table 3: Connection Table 
+        li 
+            p Connect pin 1 and pin 2 to toggle switches A and B respectively.
+        li 
+            p Connect corresponding output terminal (pin 3) to resistance (220 Ω). The other end of resistance is connected to positive (+) terminal of LED.
+        li 
+            p Connect negative (-) terminal of the LED to ground.
+        li 
+            p Click on Check Connections button. If connections are right, click on ‘OK’, then Simulation will become active.
+        li 
+            p Apply different combinations (0,0), (0,1), (1,0) and (1,1) to input terminals of one gate (say pins 1 and 2) by using toggle switches A and B.
+        li 
+            p Observe the corresponding output on the LED.
+        li 
+            p Fill the observed values in the Truth Table.
+        li 
+            p Verify the Truth Table of 'OR' gate from the experimental results by clicking on Check button, if outputs are correct then click on OK.
+        li 
+            p Repeat steps 4 to 11 for different gates of the IC.
+        li 
+            p Click on the Reset button to reset the page.
+    br
+    button(onClick="javascript:window.open('https://ade-iitr.vlabs.ac.in/exp/general-bread-board/simulation.html','_blank')") PROCEED TO SIMULATION
     form(action='references')
         button(type='submit') Next Article: References
