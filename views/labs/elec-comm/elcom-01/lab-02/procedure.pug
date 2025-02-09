@@ -1,0 +1,32 @@
+extends lab-layout 
+
+block content
+    h2 Lab 01:
+    h1 Familiarization with the Breadboard
+    h2 Procedures:
+    form(action='theory')
+        button(type='submit') Previous Article: Theory
+    br
+    ol 
+        li 
+            p Select an IC from the list.
+        li 
+            p Fill the Truth Table for the IC.
+        li 
+            p Select any one of the gates of the IC.
+        li 
+            p Click on the component button to place the component on the table.    
+        li 
+            p Make connections as per the pin diagram of the IC.
+        li 
+            p Click on "Check" button. If the connections are right, verify the truth table 
+        li 
+            p Select other gates of the IC and repeat steps 4 to 7.
+        li 
+            p Click on "Reset" button to reset the page and repeat the experiment from Step 1 to 8.
+    h2 Familiarise with components and connection table of Different ICs: 
+    h3 1.) 74LS04: Hex Inverter/1-input NOT Gate
+    br
+    button(onClick="javascript:window.open('https://ade-iitr.vlabs.ac.in/exp/general-bread-board/simulation.html','_blank')") PROCEED TO SIMULATION
+    form(action='references')
+        button(type='submit') Next Article: References
