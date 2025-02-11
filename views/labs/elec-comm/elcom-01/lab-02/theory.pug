@@ -286,5 +286,62 @@ block content
     img(src='/public/images/elec-comm/01/lab02/16c.png')
     p.center Fig.-16(c): OR gate using NAND gate
     br
+    h3 2.) The NOR Gate 
+    p.
+        It is a logic circuit in which OR gate is followed by a NOT gate. The output of NOR gate is LOW if any of the 
+        inputs are HIGH. Its symbol is an OR gate with a small circle on the output (Fig-17). The small circle 
+        represents inversion. Boolean expression for NOR gate is as follows:
+    p $$ Y = \neg{(A+B)}$$
+    img(src='/public/images/elec-comm/01/lab02/nor-gate-schema.png')
+    p.center Fig.-17: Symbol of 2-input NOR gate
+    br
+    include gatetables/norgate-quad.pug 
+    br
+    p.center Table 9: Truth table for 2-input NOR gate
+    p An NOR gate can have as many inputs as desired. No matter how many inputs, the action of any NOR gate is summarized like this:
+    p <strong> All low inputs produce a high output. </strong>
+    p The logic symbol of a three inputs NOR gate is shown in Fig-18.
+    img(src='/public/images/elec-comm/01/lab02/norgate-3in-schema.png')
+    p.center Fig.-18: Symbol of 3-input NOR gate
+    br
+    include gatetables/norgate-triple.pug 
+    br
+    p.center Table 8: Truth table for 3-input NOR gate
+    p IC 7402 and IC 7427 are standard TTL ICs of 2 input and 3input NOR gate respectively
+    h3 2-INPUT NOR GATE IC-7402
+    p IC-7402 (Fig-19) is a device containing four independent gates each of which performs the logic NOR function. Pins 14 and 7 provide power for all four logic gates.
+    h3 3-INPUT NOR GATE IC-7427
+    p IC-7427 (Fig-20) is a Triple 3-input NOR gate and contains three independent gates each of which performs logic NOR operation
+    .row 
+        .column 
+            img(src='/public/images/elec-comm/01/lab02/quadnor-schema.png')
+            p <strong> Pin diagram of 2-input NOR gate IC 7402 </strong>
+        .column 
+            img(src='/public/images/elec-comm/01/lab02/triplenor-schema.png')
+            p <strong> Pin diagram of 3-input NOR gate IC 7427 </strong>
+    h3 UNIVERSALITY OF NAND GATE
+    p.
+        Figs-21(a), (b) and (c) show how basic logic gates can be obtained from NOR gate. Since, we can perform all 
+        the Boolean operations using only NOR gates it is termed as universal logic gate.
+    p.
+        To get a NOT gate we tie inputs of NOR gate together Fig-21(a) show that there is only one input to the circuit. 
+        If input is 0, then both the inputs to NOR gate are 0. Following NOR gate truth table, we see output now is 1. 
+        Similarly, if input is 1, both the inputs to NOR gate are 1 that gives output 0. Therefore output of circuit is 
+        complement of its input and thus gives NOT operation.
+    p.
+        Fig-21(b) shows how to get OR circuit using only NOR gates. The first NOR gate performs usual NOR operation while 
+        second NOR gate performs as NOT gate and inverts the NOR logic to OR.
+    p.
+        Fig-21(c) shows how we can get AND gate using NOR gates only. The output of this circuit, obtained from NOR gate, 
+        is high only when both the inputs are high and it functions like an AND gate.
+    img(src='/public/images/elec-comm/01/lab02/21a.png')
+    p.center Fig.-16(a): NOT gate using NOR gate
+    img(src='/public/images/elec-comm/01/lab02/21b.png')
+    p.center Fig.-16(b): AND gate using NOR gate
+    img(src='/public/images/elec-comm/01/lab02/21c.png')
+    p.center Fig.-16(c): OR gate using NOR gate
+    br
+    h3 The Ex-OR Gate (XOR)
+    br
     form(action='procedure')
         button(type='submit') Next Article: Procedure
