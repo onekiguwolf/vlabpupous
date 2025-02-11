@@ -32,9 +32,12 @@ body {
   height: 15%
 }
 .titlebar img {
-  width: 10%;
-  left: 0;
-  top: 10%;
+  overflow: hidden;
+  position: fixed;
+  top: 5.7%;
+  left: 1%;
+  display: block;
+  width: 4.4%;
 }
 .titlebar ul {
   list-style-type: none;
