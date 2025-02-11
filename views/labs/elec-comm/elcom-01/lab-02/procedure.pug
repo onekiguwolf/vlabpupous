@@ -26,7 +26,64 @@ block content
             p Click on "Reset" button to reset the page and repeat the experiment from Step 1 to 8.
     h2 Familiarise with components and connection table of Different ICs: 
     h3 1.) 74LS04: Hex Inverter/1-input NOT Gate
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-1.png')
+    p.center From left to right: Breadboard, Power Supply, 74LS04 x1, input x1, LED x1 
+    p Table Sample for the 74LS04 Gate:
+    img(src='/public/images/elec-comm/01/lab02/procedures/notgate-table.png')
+    p.center Tip: The output for the 74LS04 Gates are always even (2,4,6,...)
+    h3 2.) 74LS32: 2-input QUAD OR Gate
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-2.png')
+    p.center Similar materials except there's 2 inputs and one 74LS32 IC.
+    p Table Sample for the 74LS32 Gate: 
+    img(src='/public/images/elec-comm/01/lab02/procedures/orgate-table.png')
+    p.center Tip: In a QUAD Gate, the output is always 3, 6, 11, and 8. the inputs are interchangeable as long as it's within 2 numbers before the output (input for 3 is 1&2.)
+    h3 3.) 74LS08: 2-input QUAD AND Gate
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-3.png')
+    p.center Similar Materials, except the IC will be the 74LS08.
+    p Table Sample for the 74LS08 Gate: 
+    img(src='/public/images/elec-comm/01/lab02/procedures/andgate-table.png')
+    p.center Similar table to the 74LS32 Gate.
+    h3 4.) 74LS00: 2-input QUAD NAND Gate 
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-4.png')
+    p Table Sample for the 74LS00 Gate: 
+    img(src='/public/images/elec-comm/01/lab02/procedures/nandgate-table.png')
+    h3 5.) 74LS02: 2-input QUAD NOR Gate 
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-5.png')
+    p Table Sample for the 74LS02 Gate:
+    img(src='/public/images/elec-comm/01/lab02/procedures/norgate-table.png')
+    h3 6.) 74LS86: 2-input QUAD XOR Gate (or Ex-Or Gate)
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-6.png')
+    p Table Sample for the 74LS86 Gate: 
+    img(src='/public/images/elec-comm/01/lab02/procedures/xorgate-table.png')
+    h3 7.) 74LS266: 2-input QUAD XNOR Gate (or Ex-Nor Gate)
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-7.png')
+    p Table Sample for the 74LS266 Gate: 
+    img(src='/public/images/elec-comm/01/lab02/procedures/xnorgate-table.png')
+    h3 8.) 74LS11: 3-input Triple AND Gate 
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-8.png')
+    p Table Sample for the 74LS11 Gate:
+    img(src='/public/images/elec-comm/01/lab02/procedures/andgate3in-table.png')
+    p.center Notice in a Triple Gate, the input for Output 12 is pins 01, 02, and 13.
+    img(src='/public/images/elec-comm/01/lab02/procedures/andgate3in-b-table.png')
+    p.center The layout for the remaining pins is straightforward: pins 3-5 and 11-9 are inputs, their outputs are pins 6 and 8, respectively.
+    h3 9.) 74LS4075: 3-input Triple OR Gate
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-9.png')
+    p Table Sample for the 74LS4075 Gate:
+    img(src='/public/images/elec-comm/01/lab02/procedures/orgate3in-table.png')
+    p.center The layout differs slightly from the 74LS11: This time, one of the gates have the input at pins 1, 2, and 8, and their output at 9.
+    img(src='/public/imageselec-comm/01/lab02/procedures/orgate3in-b-table.png')
+    p.center While the layout for pins 3-6 are the same, pin 10 is now the output of pins 13-11.
+    h3 10.) 74LS10: 3-input Triple NAND Gate
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-10.png')
+    p Table Sample for the 74LS10 Gate: 
+    img(src='/public/images/elec-comm/01/lab02/procedures/nandgate3in-table.png')
+    p.center Similar Gate layout to the 74LS11.
+    h3 11.) 74LS27: 3-input Triple NOR Gate
+    img(src='/public/images/elec-comm/01/lab02/procedures/components-11.png')
+    p Table Sample for the 74LS27 Gate: 
+    img(src='/public/images/elec-comm/01/lab02/procedures/norgate3in-table.png')
+    p.center Similar layout to the 74LS4075.
     br
-    button(onClick="javascript:window.open('https://ade-iitr.vlabs.ac.in/exp/general-bread-board/simulation.html','_blank')") PROCEED TO SIMULATION
+    button(onClick="javascript:window.open('https://ade-iitr.vlabs.ac.in/exp/familiarization-of-ics/simulation.html','_blank')") PROCEED TO SIMULATION
     form(action='references')
         button(type='submit') Next Article: References

@@ -1,17 +1,17 @@
 extends layout
 
 block content
+img.iconic(src='/public/images/pupouslogo.png')
   h1 Welcome to PUP OUS VLab!
   p.
     This Website offers Virtual Laboratories (aka VLabs) to students of the 
     Polytechnic University of the Philippines -- Open University System.
   p.
-    It is recommended for users to use a desktop or laptop device for the best experience.
-    For mobile users, you may enable Desktop Mode from your app browser settings.
+    It is recommended for users to use a desktop or laptop device for the best experience 
+    (mobile view is currently not optimized as of writing)
   br
-  .iconic
-    img(href='/public/images/icon.jpg')
+  img.iconic(src='/public/images/icon.png')
   p The content of this Website is from the Virtual Lab, provided by the Indian Government's Ministry of Education.
-   form(action='https://vlab.co.in/')
+   form(action='https://vlab.co.in/'target='_blank' rel='noopener noreferrer')
         button(type='submit') Visit VLabs by MoE India!
   br
