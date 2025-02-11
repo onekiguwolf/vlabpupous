@@ -16,6 +16,7 @@
     "netlify-lambda": "^2.0.16",
     "pug": "^3.0.3",
     "pug-cli": "^1.0.0-alpha6",
+    "serve-favicon": "^2.5.0",
     "serverless-http": "^3.2.0"
   }
 }
