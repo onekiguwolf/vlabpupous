@@ -120,6 +120,7 @@ block content
         other gates, as shown in table below. The NAND gate is available as a 2-, 3-, 4-, or 8-input gate. The other 
         gates have fewer configurations.
     include gatetables/ttl-gates.pug 
+    br
     p.center Table 1: Standard TTL Gates
     br
     h2 Basic Logic Gates 
@@ -133,6 +134,7 @@ block content
     img(src='/public/images/elec-comm/01/lab02/not-gate-schema.png')
     p.center Schematic Symbol of a NOT Gate
     include gatetables/notgate.pug 
+    br
     p.center Table 2:Truth table for NOT gate
     p The presence of a small circle, known as the bubble, always denotes inversion in digital circuits.
     p IC- 7404 is standard TTL IC of NOT gate.
@@ -149,8 +151,39 @@ block content
         when all inputs are high. In other words, the AND gate is an <strong>‘all or nothing gate’</strong>; a 
         high output occurs only when all inputs are high.
     p In Boolean equation form -
-    p $$
-
+    p $$ \text{Y = A AND B = A•B =} \hspace{0.1cm} A \land B$$
+    p.
+        The symbol ‘.’ in the above expression is known as the ‘AND operator’. The 2-input AND gate symbol is 
+        shown in Fig-4.
+    img(src='/public/images/elec-comm/01/lab02/and-gate-schema.png')
+    p.center Fig.-4: Symbol of 2-input AND gate
+    include gatetables/andgate-quad.pug 
+    br
+    p.center Table 3:Truth table for 2-input AND gate
+    p <strong> The AND gate has a high output only when A and B are high. </strong>
+    p An AND gate can have as many inputs as desired.
+    p.
+        Fig-5 shows the symbol of a 3-input AND gate. The inputs are A, B and C. When all inputs are low, 
+        Y is low. Even if one input is low, Y is in the low state. The only way to get a high output is to 
+        raise all inputs to high state (+5 V). In equation form, the 3-input AND gate is represented as:
+    p $$ \text{Y = A•B•C or} \hspace{0.1cm} A \land B \land C$$
+    img(src='/public/images/elec-comm/01/lab02/andgate-3in-schema.png')
+    p.center Fig.-5: Symbol of 3-input AND gate
+    include gatetables/andgate-triple.pug 
+    br 
+    p.center Table 4:Truth table for 3-input AND gate
+    p IC 7408 and IC 7411 are standard TTL ICs of 2 input and 3input AND gate respectively
+    h3 2-INPUT AND GATE IC-7408
+    p IC-7408 (Fig-6) is a Quad 2-input AND gates and contains four independent gates each of which performs the logic AND function.
+    h3 3-INPUT AND GATE IC-7411
+    p IC-7411 (Fig-7) is a Triple 3-input AND gate and contains three independent gates each of which perform logic AND operation.
+    .row 
+        .column
+            img(src='/public/images/elec-comm/01/lab02/quadand-schema.png')
+            p Pin diagram of 2-input AND gate IC 7408
+        .column
+            img(src='/public/images/elec-comm/01/lab02/tripleand-schema.png')
+            p Pin diagram of 3-input AND gate IC 7411
     br
     form(action='procedure')
         button(type='submit') Next Article: Procedure
