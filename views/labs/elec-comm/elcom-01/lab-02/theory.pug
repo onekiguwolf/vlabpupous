@@ -377,5 +377,25 @@ block content
     img(src='/public/images/elec-comm/01/lab02/quadxor-schema.png')
     p.center Pin diagram of 2-input Ex-OR gate IC 7486
     br
+    h3 The Ex-NOR Gate 
+    p.
+        The Ex-NOR Gate is a digital logic gate that is the reverse or complementary form of the Ex-OR function.Fig-25 shows 
+        the standard symbol of Exclusive-NOR (Ex-NOR) gate. Its truth table is given below. Its logic operation is specified 
+        as-
+    p $$ \text{Y = A Ex-NOR B = A (Ex-OR)’ B = (A ⊕ B)’ = A ⊙ B} $$
+    img(src='/public/images/elec-comm/01/lab02/symbol-xnor.png')
+    p.center Fig.-25: Symbol of 2-input Ex-NOR gate
+    br
+    include gatetables/xnor-gate.pug 
+    br
+    p.center Table 12: Truth table for 2-input Ex-NOR gate
+    p IC 74266 is standard TTL IC of Ex-NOR gate.
+    h3 2-INPUT Ex-NOR GATE IC-74266
+    p.
+        IC-74266 (Fig-26) is a Quad 2-input Ex-NOR gates and contains four independent gates each of which performs 
+        logic Ex-NOR operation.
+    img(src='/public/images/elec-comm/01/lab02/quadxnor-schema.png')
+    p.center Pin diagram of 2-input Ex-NOR gate IC 74266
+    br
     form(action='procedure')
         button(type='submit') Next Article: Procedure
