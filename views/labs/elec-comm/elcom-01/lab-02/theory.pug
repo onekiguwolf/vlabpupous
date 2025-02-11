@@ -133,6 +133,7 @@ block content
     p Fig-2 shows the symbol of NOT gate.
     img(src='/public/images/elec-comm/01/lab02/not-gate-schema.png')
     p.center Schematic Symbol of a NOT Gate
+    br
     include gatetables/notgate.pug 
     br
     p.center Table 2:Truth table for NOT gate
@@ -157,6 +158,7 @@ block content
         shown in Fig-4.
     img(src='/public/images/elec-comm/01/lab02/and-gate-schema.png')
     p.center Fig.-4: Symbol of 2-input AND gate
+    br
     include gatetables/andgate-quad.pug 
     br
     p.center Table 3:Truth table for 2-input AND gate
@@ -169,6 +171,7 @@ block content
     p $$ \text{Y = A•B•C or} \hspace{0.1cm} A \land B \land C$$
     img(src='/public/images/elec-comm/01/lab02/andgate-3in-schema.png')
     p.center Fig.-5: Symbol of 3-input AND gate
+    br
     include gatetables/andgate-triple.pug 
     br 
     p.center Table 4:Truth table for 3-input AND gate
@@ -180,10 +183,108 @@ block content
     .row 
         .column
             img(src='/public/images/elec-comm/01/lab02/quadand-schema.png')
-            p Pin diagram of 2-input AND gate IC 7408
+            p <strong>Pin diagram of 2-input AND gate IC 7408</strong>
         .column
             img(src='/public/images/elec-comm/01/lab02/tripleand-schema.png')
-            p Pin diagram of 3-input AND gate IC 7411
+            p <strong>Pin diagram of 3-input AND gate IC 7411</strong>
+    br
+    h3 3.) OR Gate 
+    p.
+        The OR gate has two or more input signals but only one output signal. It is called an OR gate because the output 
+        voltage is high if any or all of the input voltages are high. For instance, the output of a 2-input OR gate is 
+        high if either or both inputs are high. Thus, OR gate is also called <strong>‘any or all gate’</strong>.
+    p In Boolean equation form -
+    p $$ \text{Y = A OR B =} \hspace{0.1cm} A + B $$
+    p The symbol ‘+’ in the above expression is known as the ‘OR operator’. The 2-input OR gate symbol is shown in Fig-8.
+    img(src='/public/images/elec-comm/01/lab02/or-gate-schema.png')
+    p.center Fig.-8: Symbol of 2-input OR gate
+    br
+    include gatetables/orgate-quad.pug 
+    br
+    p.center Table 5:Truth table for 2-input OR gate
+    p An OR gate can have as many inputs as desired. No matter how many inputs, the action of any OR gate is summarized like this:
+    p <strong> One or more high inputs produce a high output. </strong>
+    p The logic symbol of a three input OR gate is shown in Fig-9.
+    img(src='/public/images/elec-comm/01/lab02/orgate-3in-schema.png')
+    p.center Fig.-9: Symbol of 3-input OR gate
+    br
+    include gatetables/orgate-triple.pug 
+    br
+    p.center Table 6:Truth table for 3-input OR gate
+    p IC 7432 and IC 744075 are standard TTL IC of 2 input and 3input OR gate respectively
+    h3 2-INPUT OR GATE IC-7432
+    p IC-7432 (Fig-10) is a device that contains four independent 2-input OR gates. Each of these gates perform the logic OR operation.
+    h3 3-INPUT OR GATE IC-74HC/HCT4075
+    p IC-74HC/HCT4075(Fig-11) is a Triple 3-inputOR gate and contains three independent gates each of which perform logic OR operation
+    .row 
+        .column 
+            img(src='/public/images/elec-comm/01/lab02/quador-schema.png')
+            p <strong> Pin diagram of 2-input OR gate IC7432 </strong>
+        .column 
+            img(src='/public/images/elec-comm/01/lab02/tripleor-schema.png')
+            p <strong> Pin diagram of 3-input OR gate IC 74HC/HCT4075 </strong>
+    br
+    h2 Universal Logic Gates
+    p.
+        AND, OR and NOT gates can be connected together to realize any logic function. It is possible to use only one 
+        type of gate for this purpose so that one needs to procure only one type of gate for this design. And more 
+        importantly, fabrication of Integrated Circuit that performs a logic operation becomes easier when gate of 
+        only one kind is used. Gates, which can perform this task, are called Universal logic gates. Clearly, basic 
+        gates like AND, OR and NOT don’t fit into this category for the simple reason that conversion among themselves 
+        itself are not possible. As for example, one cannot get OR operation by using any number or combination of AND 
+        gates.
+    h3 1.) The NAND Gate (NOT AND)
+    p.
+        It is a logic circuit in which AND gate is followed by a NOT gate. The output of NAND gate is high if any of 
+        the inputs are low. Its symbol is an AND gate with a small circle on the output. Fig-12 shows the symbol of 
+        2-input NAND gate. The small circle represents inversion. Boolean expression for NAND gate is as follows:
+    p $$ Y = \neg{(AB)}$$
+    img(src='/public/images/elec-comm/01/lab02/nand-gate-schema.png')
+    p.center Fig.-12: Symbol of 2-input NAND gate
+    br
+    include gatetables/nandgate-quad.pug 
+    br
+    p.center Table 7:Truth table for 2-input NAND gate
+    p An NAND gate can have as many inputs as desired. No matter how many inputs, the action of any NAND gate is summarized like this:
+    p <strong> All high inputs produce a low output. </strong>
+    p The logic symbol of a three input NAND gate is shown in Fig-13.
+    img(src='/public/images/elec-comm/01/lab02/nandgate-3in-schema.png')
+    p.center Fig.-13: Symbol of 3-input NAND gate
+    br
+    include gatetables/nandgate-triple.pug 
+    br
+    p.center Table 8: Truth table for 3-input NAND gate
+    p IC 7400 and IC 7410 are standard TTL ICs of 2 input and 3input NAND gate respectively.
+    h3 2-INPUT NAND GATE IC-7400
+    p IC-7400(Fig-14) designates a device containing four input NAND gates. Each gate uses two pins for input and one pin for its output, and the remaining two contacts are connected to supply power (+5 V) and the ground.
+    h3 3-INPUT NAND GATE IC-7410
+    p IC-7410 (Fig-15) is a Triple 3-input NAND gate and contains three independent gates each of which performs logic NAND operation
+    .row 
+        .column 
+            img(src='/public/images/elec-comm/01/lab02/quadnand-schema.png')
+            p <strong> Pin diagram of 2-input NAND gate IC 7400 </strong>
+        .column 
+            img(src='/public/images/elec-comm/01/lab02/triplenand-schema.png')
+            p <strong> Pin diagram of 3-input NAND gate IC 7410 </strong>
+    h3 UNIVERSALITY OF NAND GATE
+    p All basic logic gates can be obtained from NAND gates and that is why it is called a universal logic gate.
+    p.
+        Fig-16(a) shows how we tie inputs of NAND gate together to get a NOT gate that has only One input. If input 
+        is 0, then both the inputs to NAND gate are 0. Following NAND gate truth table, we see output now is 1. 
+        Similarly, if input is 1, both the inputs to NAND gate are 1 that gives output 0. Therefore, output of circuit 
+        is complement of its input and thus gives NOT operation.
+    p.
+        Fig-16(b) shows how we get AND circuit using only NAND gates. The second NAND gate performs as a NOT gate and 
+        inverts the NAND logic of first NAND gate to AND logic.
+    p.
+        To obtain OR logic using NAND gate, we draw circuit diagram as shown in Fig-16(c). This circuit has NAND gate 
+        at output and thus, inverts the output of previous circuit, from NOR to OR.
+    img(src='/public/images/elec-comm/01/lab02/16a.png')
+    p.center Fig.-16(a): NOT gate using NAND gate
+    img(src='/public/images/elec-comm/01/lab02/16b.png')
+    p.center Fig.-16(b): AND gate using NAND gate
+    img(src='/public/images/elec-comm/01/lab02/16c.png')
+    p.center Fig.-16(c): OR gate using NAND gate
     br
     form(action='procedure')
         button(type='submit') Next Article: Procedure
