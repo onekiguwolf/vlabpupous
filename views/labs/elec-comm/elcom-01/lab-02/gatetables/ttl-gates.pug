@@ -1,0 +1,40 @@
+//- Had to do this the long way, hopefully I find a faster way to write a table down :skull:
+block table01
+    head 
+        style.
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                margin: auto;
+                padding: 10px;
+            }
+            th, td {
+                padding: 4px;
+                text-align: left;
+            }
+    table(width:100)
+        tr 
+            td Type 
+            td QUAD 2-input
+            td Triple 3-input
+            td Dual 4-input 
+            td Single 8-input
+        tr 
+            td NAND
+            td 7400
+            td 7410
+            td 7420
+            td 7430
+        tr 
+            td NOR
+            td 7402
+            td 7427
+            td 7425
+        tr 
+            td AND
+            td 7408
+            td 7411
+            td 7421
+        tr 
+            td OR
+            td 7432

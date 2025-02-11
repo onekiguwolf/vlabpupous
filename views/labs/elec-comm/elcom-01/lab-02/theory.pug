@@ -1,127 +1,156 @@
 extends lab-layout
 
 block content 
-    h2 Lab 01:
-    h1 Familiarization with the Breadboard
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML") 
+    h2 Lab 02:
+    h1 Familiarization with the ICs
     h2 Theory:
     form(action='aim')
         button(type='submit') Previous Article: Aim
-    br
-    h3 Introduction
-    p.
-        A breadboard is a circuit board that is used to make temporary circuits. This device has holes in it and strips of metal
-        below the board which connect the holes placed on the top of the board. Breadboards are solderless and they are made of
-        two kinds of strips i.e. terminal and bus strips. Terminal strips help in holding the electronic elements while the bus
-        strips are used to power electric power to all the electronic components. In order to form a circuit, wires are inserted
-        simply inside the holes. An advantage of using a breadboard is that the positions of the wires can be changed if they are
-        placed in a wrong order. The connections of the breadboard are mostly temporary and the elements can further be reassembled
-        and reused without any damage. No soldering is required so it is easy to change connections and replace components. Today, 
-        starting from tiny analog, digital circuits to big complicated CPUs, everything can be tested with the help of this.
-    p.
-        The name “breadboard” goes way back to the days when people literally used a piece of wood (shown in Fig.1) on which they 
-        sliced bread, in order to construct electronic circuits. They used nails and wires to connect up the components. Nowadays, 
-        the new generation of “breadboard” is made from a rectangular piece of plastic, but we still refer to them by the name “breadboard.”
-    img(src='/public/images/elec-comm/01/lab01/fig01.jpg')
-    p.center Figure 1: Breadboard circuit in the past.
-    p.
-        Breadboards come in various brands and sizes to suit the requirements of the electronic circuits. Nevertheless, all breadboards share 
-        the same fundamentals and ideas.
-    p Here are some types of a Standard Breadboard: 
-    ol 
+    h3 List of Logic Gate ICs to be used in the Simulation: 
+    ul 
         li 
-            p Full-size 
+            p IC-7404 (NOT Gate)
         li 
-            p Half-size 
+            p IC-7432 (2-input OR Gate)
         li 
-            p Mini size 
+            p IC-7408 (2-input AND Gate)
+        li 
+            p IC-7400 (2-input NAND Gate)
+        li 
+            p IC-7402 (2-Input NOR Gate)
+        li 
+            p IC-7486 (2-Input EX-OR Gate)
+        li 
+            p IC-74266 (2-Input EX-NOR Gate)
+        li 
+            p IC-7411 (3-Input AND Gate)
+        li 
+            p IC-744075 (3-Input OR Gate)
+        li 
+            p IC-7410 (3-Input NAND Gate)
+        li 
+            p IC-7427 (3-Input NOR Gate)
+        br
+    h3 What is a Gate?
+    p.
+        A gate may be regarded as a barrier which when closed prevents the passage of information but if opened 
+        allows the signals to pass through freely.
+    h3 What is a LOGIC Gate?
+    p.
+        Logic gates are the building blocks of digital electronics. They are used in digital electronics to 
+        change one voltage level (input voltage) into another (output voltage) according to some logical statement 
+        relating them.
     br
     p.
-        Moreover, there are different colors of breadboards (white, blue, red, green, yellow, transparent). Fig. 2 shows different types of breadboards.
-    img(src='/public/images/elec-comm/01/lab01/fig02.jpg')
-    p.center Figure 2: Different Types of Breadboard
-    p.
-        Breadboards have many tiny sockets (called 'holes') arranged on a 0.1" grid. Sockets are used to hold the components in a circuit. The leads of 
-        most components can be pushed straight into the holes. Total no. of holes in one unit of breadboard is 420. There are sixty-four groups of 5 
-        horizontally connected terminals and four buses of 25 vertically connected terminals. The top and bottom rows of holes are connected horizontally 
-        while the remaining holes are connected vertically as shown in Fig. 3. A middle divider or “ravine” runs vertically and divides the breadboard symmetrically 
-        into left and right sides. The halves of the breadboard are electrically isolated from each other by the middle divider.
-    img(src='/public/images/elec-comm/01/lab01/fig03.jpg')
-    p.center Figure 03: Breadboard Holes Connections
-    p.
-        In order to identify vertical columns, letters from “A” to “J” are printed at the top and bottom of the breadboard running horizontally and dividing the holes 
-        evenly into vertical lines. To identify horizontal rows, numbers from 1 to 30 are printed on left and right edges on half-size breadboards and from 1 to 60 or 
-        63 on full-size breadboards. Some breadboards use skip-counting in fives, but it doesn’t change the main concept of row-numbering on breadboards. Together, the 
-        numbers and letters guide us to locate a certain hole easily while building complicated circuits or during troubleshooting. For instance, hole “G15” is located 
-        at the intersection of column “G” and row “15.”
-    img(src='/public/images/elec-comm/01/lab01/fig04.jpg')
-    p.center Figure 04: A breadboard have numbers and letters marked on various rows and columns
-    p Here we have a breadboard where the adhesive backing has been removed (Fig. 5).
-    img(src='/public/images/elec-comm/01/lab01/fig05.jpg')
-    p.center Figure 05: A breadboard with the adhesive backing removed.
-    p.
-        We can see lots of horizontal rows of metal strips on the bottom of the breadboard. The rows or ‘Terminal strips’ are where we are supposed to connect the electronic 
-        components. The top of the metal rows has little clips that hide under the plastic holes. This is what the clip looks like when it is removed from a breadboard.
-    img(src='/public/images/elec-comm/01/lab01/fig06.jpg')
-    p.center Figure 06: A single strip of Conductive Metal 
-    p.
-        This means each set of five holes forming a half-row (columns A–E or columns F–J) is electrically connected. For example, that means hole A1 is electrically 
-        connected to holes B1, C1, D1 and E1. It is not connected to hole A2, because that hole is in a different row, with a separate set of metal clips. It is also 
-        not connected to holes F1, G1, H1, I1 or J1, because they are on the other "half" of the breadboard and the clips are not connected across the gap in the middle. 
-        When we press a component's lead into the exposed holes on a breadboard, one of these clips grabs onto it. Once inserted that component will be electrically connected 
-        to anything else placed in that row (Fig. 7). This is because the metal rows are conductive and allow current to flow from any point in that strip. Wire links can be 
-        made with single-core plastic-coated wire of 0.6 mm diameter (the standard size). Stranded wire is not suitable because it will crumple when pushed into a hole and it 
-        may damage the board if strands break off.
-    img(src='/public/images/elec-comm/01/lab01/fig07.jpg')
-    p.center Figure 07: An electric component inserted in a single strip of conductive metal.
-    p.
-        Unlike all the main breadboard rows, which are connected in sets of five holes, the buses or power rails run the entire length of the breadboard. These power rails 
-        are metal strips that are identical to the ones that run horizontally, except they are, typically, all connected. When building a circuit, we tend to need power in 
-        lots of different places. The power rails give us lots of easy access to power wherever we need it in our circuit. Usually they are labeled with A+ and A− and have a 
-        red and blue or black strip, to indicate the positive and negative side.
-    p.
-        It is important to be aware that the power rails on either side are not connected, so if we want the same power source on both sides, we need to connect the two sides 
-        with some jumper wires. We should keep in mind that the markings are there just as a reference. There is no rule that says we have to plug power into the '+' rail and 
-        ground into the '−' rail, though it's good practice to keep everything in order. Fig. 8 shows how two jumper wires used to connect the power rails on both sides. Always 
-        attach the '+' to '+' and the '−' to '−'.
-    img(src='/public/images/elec-comm/01/lab01/fig08.jpg')
-    p.center Figure 08: Twi jumper wires used to connect the power rails on both sides.
-    p.
-        Fig. 9 shows, an LED inserted into a breadboard. Here each leg of the LED is placed on either side of the ravine. This prevents the connections to the LED from being 
-        shorted.
-    img(src='/public/images/elec-comm/01/lab01/fig09.jpg')
-    p.center Figure 09: A LED inserted into a breadboard.
-    p.
-        Integrated circuits(ICs) are inserted across the central gap with their notch or dot to the left.IC pins are numbered anti-clockwise around the IC starting near 
-        the notch or dot. Fig. 10 shows the numbering for 8-pin and 14-pin ICs, but the principle is the same for all sizes.
-    img(src='/public/images/elec-comm/01/lab01/fig10.jpg')
-    p.center Figure 10: Numbering for 8-pin and 14-pin Integrated Circuit chips.
-    p.
-        Earlier we mentioned that the ravine isolates the two sides of a breadboard. This ravine serves a very important purpose. Many ICs are manufactured specifically to 
-        fit onto breadboards. In order to minimize the amount of space they take up on the breadboard, they come in what is known as a Dual in-line Package or DIP. These DIP 
-        chips have legs that come out of both sides and fit perfectly over that ravine. Since each leg on the IC is unique, we don’t want both sides to be connected to each 
-        other. That is where the separation in the middle of the board comes in handy. Thus, we can connect components to each side of the IC without interfering with the 
-        functionality of the leg on the opposite side.
-    img(src='/public/images/elec-comm/01/lab01/fig11.jpg')
-    p.center Figure 11: Two DIP ICs inserted onto the breadboard.
+        <b>‘Thus, a logic gate is a digital circuit which works according to some logical relationship between 
+        input and output voltages.’</b>
     br
-    h3 Example
-    p Suppose we want to construct the following series-parallel combination circuit on a breadboard (Fig 12).
-    img(src='/public/images/elec-comm/01/lab01/fig12.jpg')
-    p.center Figure 12: A series-parallel combination circuit.
     p.
-        The recommended way to do so on a breadboard would be to arrange the resistors in approximately the same pattern as seen in the schematic. If 24 volts is required and 
-        we only have 6-volt batteries available, four may be connected in series to achieve the same effect:
-    img(src='/public/images/elec-comm/01/lab01/fig13a.jpg')
-    p.center Figure 13.a: Layout of the schematic circuit shown on Figure 12 in a breadboard.
-    p This is by no means the only way to connect these four resistors together to form the circuit shown in the schematic. An alternative layout may be:
-    img(src='/public/images/elec-comm/01/lab01/fig13b.jpg')
-    p.center Figure 13.b: An alternative layout for Figure 12.
+        A logic gate may have one or more inputs, but it has only one output.
+    h3 Truth Tables 
+    p.
+        The relationship between the possible values of input and output voltages are expressed in the form of a 
+        table called <strong>truth table</strong> or <strong>table of combinations</strong>.
+    p Truth table of a logic gate is a table that shows all input and output possibilities for the logic gate.
+    p The basic logic gates are: 
+    ul 
+        li 
+            p OR Gate 
+        li 
+            p AND Gate 
+        li 
+            p NOT Gate 
+        li 
+            p Ex-OR Gate (or XOR)
+        li
+            p Ex-NOR Gate (or XNOR)
+    p The logical statements that logic gates follow are called <strong>Boolean expressions</strong>.
+    p eg: Y = A + B, Y = A.B, Y = A’ are Boolean expressions for the OR, AND and NOT gates respectively.
+    p.
+        Logic functions can be implemented in several ways. In the past, vacuum tube and relay circuits performed 
+        logic functions. Now a days digital logic gates can be made by connecting discrete components such as 
+        diodes, transistors and resistors together but these are less common. Presently logic functions are 
+        performed by tiny integrated circuits (ICs). These ICs are small silicon semiconductors sheets called chips, 
+        containing the electronic components for the logic gates. The chip is mounted in a plastic container, and 
+        connections are welded to external pins which may range from 14 in a small IC package to 64 or more in a 
+        large one.
+    h3 Integrated Circuit 
+    p.
+        An integrated circuit (Fig-1), abbreviated as IC, is a semiconductor wafer on which thousands or millions of 
+        both the active and passive components as resistors, capacitors and transistors are fabricated. The typical size 
+        of an IC is 0.2 mm x 0.2 mm x 0.001 mm. The individual circuit components of an IC cannot be removed or replaced 
+        because they are automatically part of a single chip. The different components are isolated from each other by 
+        isolation diffusion within the crystal chip and are interconnected by an aluminium layer which serves as wires.
+    img.small(src='/public/images/elec-comm/01/lab02/integrated-circuit-dip.png')
+    p.center Fig.-1: An integrated circuit
+    p.
+        A particular IC is categorized linear (analog) or digital depending on its intended application.Linear ICs have 
+        continuously variable output (theoretically capable of attaining an infinite number of states) that depends on 
+        the input signal level.Linear ICs are used as audio frequency (AF) and radio frequency (RF) amplifiers. Digital 
+        ICs operate at only a few defined levels or states rather than over a continuous range of signal amplitudes. 
+        These devices are used in computers, computer networks, modems and frequency counters. The fundamental building 
+        blocks of digital ICs are logic gates which work with binary data, i.e., signals that have only two different 
+        states called low (logic 0) and high (logic 1).
+    p.
+        Basically, there are two types of semiconductor devices: bipolar and unipolar. Based on these devices, digital 
+        integrated circuits have been made which are commercially available. Various digital functions are being 
+        fabricated in a variety of forms using bipolar and unipolar technologies. A group of compatible IC’s with the 
+        same logic levels and supply voltages for performing various logic functions have been fabricated using a 
+        specific circuit configuration which is referred to as a logic family.
+    p.
+        In1964, Texas instruments introduced transistor-transistor logic, a widely used family of digital devices. 
+        TTL is fast, inexpensive, and easy to use. Since TTL uses active low as well as active high signals, negative 
+        logic may be used as well as positive logic. Another logic family MOS employs unipolar devices MOSFETs. In PMOS, 
+        only p-channel MOSFETs are used and in NMOS, only n-channel MOSFETs are used while in complementary MOS (CMOS), 
+        both p- and n-channel MOSFETs are employed in a push-pull arrangement and are fabricated on the same silicon 
+        chip. Because the input current of a MOSFET is much smaller than that of a bipolar transistor, cascaded CMOS 
+        devices have very low power dissipation compared with TTL devices. This low dissipation explains why CMOS 
+        circuits are used in battery powered equipment such as pocket calculators, digital wrist watches, and portable 
+        computers.
+    p.
+        The most popular transistor-transistor logic (TTL) in use includes the 7400 and the 74LS00 families: resistors, 
+        diodes and BJT’s are the elements used to construct these circuits. The 74C00 and the 74HC00 are the most widely 
+        used CMOS families. They use two different types of MOSFETs.
+    p.
+        7400 TTL series devices are guaranteed to work reliably over a temperature range of 0 to 70°C and over a supply 
+        range of 4.75 to 5.25 volts. The NAND gate is the backbone of the 7400 TTL series because most devices in this 
+        family are derived from it. Because of its central role in TTL technology, the NAND gate has become the least 
+        expensive and most widely used TTL gate. Furthermore, the NAND gate is available in more configurations than 
+        other gates, as shown in table below. The NAND gate is available as a 2-, 3-, 4-, or 8-input gate. The other 
+        gates have fewer configurations.
+    include gatetables/ttl-gates.pug 
+    p.center Table 1: Standard TTL Gates
     br
-    h3 Limitations of a Breadboard 
+    h2 Basic Logic Gates 
+    h3 1.) The NOT Gate 
+    p A NOT gate is also known as an inverter. It has one input A and one output Y. The output Y of NOT gate is always complement of input A.
+    p In equation form,
+    p $$ \text{Y = NOT A = } \neg{A} \hspace{0.1cm} \text{i.e. Y = A'}$$
+    p so that, if A = 0, Y = 0’ = 1
+    p and if A = 1, Y = 1’= 0.
+    p Fig-2 shows the symbol of NOT gate.
+    img(src='/public/images/elec-comm/01/lab02/not-gate-schema.png')
+    p.center Schematic Symbol of a NOT Gate
+    include gatetables/notgate.pug 
+    p.center Table 2:Truth table for NOT gate
+    p The presence of a small circle, known as the bubble, always denotes inversion in digital circuits.
+    p IC- 7404 is standard TTL IC of NOT gate.
+    h3 NOT GATE IC-7404 (aka Hex Inverter)
     p.
-        Breadboards have their limitations, though. First and foremost, they are intended for temporary construction only. If you pick up a breadboard, turn it upside-down and 
-        shake it, any components plugged into it are sure to loosen and may fall out of their respective holes. Also, breadboards are limited to fairly low-current (less than 1 amp) 
-        circuits. Those spring clips have a small contact area and thus cannot support high currents without excessive heating.
+        IC-7404 (Fig-3) contains six independent gates each of which performs the logic INVERT function. 
+        The operating voltage is 5 V, high level input voltage is 2 V, and low level input is 0.8 V
+    img(src='/public/images/elec-comm/01/lab02/7404-datasheet.png')
+    p.center Fig.-3: Pin diagram of NOT gate IC 7404
+    br
+    h3 2.) The AND Gate
+    p.
+        The AND gate has two or more input signals but only one output signal. The AND gate has a high output 
+        when all inputs are high. In other words, the AND gate is an <strong>‘all or nothing gate’</strong>; a 
+        high output occurs only when all inputs are high.
+    p In Boolean equation form -
+    p $$
+
     br
     form(action='procedure')
         button(type='submit') Next Article: Procedure
