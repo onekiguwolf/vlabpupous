@@ -342,6 +342,40 @@ block content
     p.center Fig.-16(c): OR gate using NOR gate
     br
     h3 The Ex-OR Gate (XOR)
+    p.
+        By combining standard logic gates together more complex gate the Exclusive-OR or Ex-OR Gate is achieved which is used 
+        extensively in building arithmetic logic circuits, computational logic comparators and error detection circuits. It is 
+        not a basic operation and can be performed using the basic gates AND, OR and NOT or universal gates NAND or NOR. The 
+        exclusive-OR gate has a high output only when an odd number of inputs are high. Fig-22 shows how to build an exclusive-OR 
+        gate. The upper AND gate forms the product A’B, while the lower one produces AB’. Therefore, the logic expression of Ex-OR 
+        gate is written as-
+    p $$ Y = (\neg{A} B) + (A \neg{B}) $$
+    img(src='/public/images/elec-comm/01/lab02/xor-gate-schema.png')
+    p.center Fig.-22: Circuit diagram of Ex-OR gate
+    p.
+        Here is what happens for different inputs. When A and B are low (Fig-22), both AND gates have low outputs; therefore, the 
+        final output Y is low. If A is low and B is high, the upper AND gate has a high output, so the OR gate has a high output. 
+        Likewise, a high A and low B results in a final output that is high. If both inputs are high, both AND gates have low outputs 
+        and the final output is low.
+    p.
+        Because of its importance, the standard symbol shown in Fig-23 is used for this operation and it is treated as an independent 
+        logic element. The logic equation of Ex-OR gate is written as
+    p $$ \text{Y = A Ex-OR B = A ⊕ B} $$
+    img(src='/public/images/elec-comm/01/lab02/symbol-xor.png')
+    p.center Fig.-23: Symbol of 2-input Ex-OR gate
+    br
+    include gatetables/xor-gate.pug 
+    br
+    p.center Table 11: Truth table for 2-input Ex-OR gate
+    p.
+        The output is high when A or B is high, but not when both are high. This is why the circuit is known as an exclusive-OR gate. 
+        In other words, the output is a ‘1’ only when the inputs are different. This circuit finds application where two digital signals 
+        are to be compared. IC 7486 is standard TTL IC of Ex-OR gate.
+    h3 2-INPUT Ex-OR GATE IC-7486
+    p.
+        IC-7486 (Fig-24) contains four independent logic Ex-OR gates. Pins 14 and 7 provide power for all four logic gates.
+    img(src='/public/images/elec-comm/01/lab02/quadxor-schema.png')
+    p.center Pin diagram of 2-input Ex-OR gate IC 7486
     br
     form(action='procedure')
         button(type='submit') Next Article: Procedure
