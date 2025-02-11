@@ -1,7 +1,11 @@
 extends layout
 
 block content
-  img.small(src='/public/images/pupouslogo.png')
+  .row 
+    .column 
+      img.small(src='/public/images/pupouslogo.png')
+    .column
+      img.small(src='/public/images/logo.jpg')
   h1 Welcome to PUP OUS VLab!
   p.
     This Website offers Virtual Laboratories (aka VLabs) to students of the 
@@ -10,7 +14,6 @@ block content
     It is recommended for users to use a desktop or laptop device for the best experience 
     (mobile view is currently not optimized as of writing)
   br
-  img.small(src='/public/images/logo.jpg')
   p The content of this Website is from the Virtual Lab, provided by the Indian Government's Ministry of Education.
    form(action='https://vlab.co.in/' target='_blank' rel='noopener noreferrer')
         button(type='submit') Visit VLabs by MoE India!
