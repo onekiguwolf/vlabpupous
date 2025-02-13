@@ -1,5 +1,9 @@
 doctype html
 html
+  head
+    title PUP OUS VLab
+    link(rel='stylesheet',href='/public/stylesheets/style.css')
+    link(rel="icon", href="/public/images/pupfavicon.ico", type="image/x-icon")
   nav 
     .titlebar
       ul 
@@ -16,7 +20,6 @@ html
       p Polytechnic University of the Philippines 
       p Open University System
       h3 Virtual Laboratory (VLab)
-      img(href='../public/images/PUPOUSLogo.png')
   .timebar
     script(src="https://code.jquery.com/jquery-3.6.0.min.js")
     script.
@@ -30,10 +33,6 @@ html
         updateTime();
       });
     p#datetime
-  head
-    title PUP OUS VLab
-    link(rel='stylesheet', href='/public/stylesheets/style.css')
-    link(rel="icon", href="/public/images/puplogo.png", type="image/x-icon")
   br
   .sidenav
     h3 Categories
